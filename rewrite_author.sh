@@ -40,10 +40,9 @@
 #    $ git commit --amend --author="John Doe <john@doe.org>" --no-edit
 #    $ git rebase --continue
 
-if [[ $# -ne 2 ]]
-  then
-   echo "Usage: $0 OLD_EMAIL NEW_EMAIL"
-   exit 1
+if [[ $# -ne 2 ]]; then
+  echo "Usage: $0 OLD_EMAIL NEW_EMAIL"
+  exit 1
 fi
 
 VARS="
