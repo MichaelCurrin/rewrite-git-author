@@ -6,9 +6,7 @@
 
 [![Made with Bash](https://img.shields.io/badge/Bash->=3-blue?logo=gnu-bash&logoColor=white)](https://www.gnu.org/software/bash/)
 
-Automation tool to do a batch rewrite of the git author in the whole commit history, replacing a selected author's email with a new email.
-
-This affects both commit _author_ and _committer_ fields.
+A simple tool replace change the email address for all commits in a repo by a user using a single command.
 
 
 ## Sample
@@ -36,6 +34,15 @@ To the new email:
 Author: Foo Bar new@another-example.com
 Date:   Thu Jun 24 20:08:18 2021 +0200
 ```
+
+
+## Documentation
+
+See the [docs](/docs) directory 
+
+To set up and run and for more info on how this works
+
+And for how to update an email address for single commit with plain git.
 
 
 ## License
