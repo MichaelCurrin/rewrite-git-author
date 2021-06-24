@@ -1,17 +1,19 @@
 #!/usr/bin/env bash
-# Rewrite git authors.
+# Rewrite git author.
 #
 # Licensed under MIT - see https://github.com/MichaelCurrin/rewrite-git-author/blob/main/LICENSE .
 
 if [[ "$#" -ne 2 ]]; then
   echo "Usage: $0 OLD_EMAIL NEW_EMAIL"
+  echo "e.g $0 foo@bar.com fizz@buzz.net"
   exit 0
 fi
 
 OLD_EMAIL="$1"
 NEW_EMAIL="$2"
+SUPPRESS_WARNING='FILTER_BRANCH_SQUELCH_WARNING=1'
 
-VARS="
+ENV_VARS="
 OLD_EMAIL=$OLD_EMAIL
 NEW_EMAIL=$NEW_EMAIL
 "
@@ -26,11 +28,11 @@ if [ "$GIT_AUTHOR_EMAIL" = "$OLD_EMAIL" ]; then
 fi
 '
 
-FILTER="$VARS $CONDITION"
+FILTER="$ENV_VARS $CONDITION"
 
 printf "$FILTER\n"
 
-git filter-branch \
+$SUPPRESS_WARNING git filter-branch \
   -f \
   --env-filter "$FILTER" \
   --tag-name-filter \
