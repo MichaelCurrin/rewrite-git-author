@@ -8,8 +8,8 @@ if [[ "$#" -ne 2 ]]; then
   exit 0
 fi
 
-OLD_EMAIL=$1
-NEW_EMAIL=$2
+OLD_EMAIL="$1"
+NEW_EMAIL="$2"
 
 VARS="
 OLD_EMAIL=$OLD_EMAIL
