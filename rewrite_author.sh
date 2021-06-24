@@ -11,7 +11,8 @@ fi
 
 OLD_EMAIL="$1"
 NEW_EMAIL="$2"
-SUPPRESS_WARNING='FILTER_BRANCH_SQUELCH_WARNING=1'
+
+export FILTER_BRANCH_SQUELCH_WARNING=1
 
 ENV_VARS="
 OLD_EMAIL=$OLD_EMAIL
@@ -32,7 +33,7 @@ FILTER="$ENV_VARS $CONDITION"
 
 printf "$FILTER\n"
 
-$SUPPRESS_WARNING git filter-branch \
+git filter-branch \
   -f \
   --env-filter "$FILTER" \
   --tag-name-filter \
