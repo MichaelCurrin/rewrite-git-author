@@ -20,7 +20,15 @@ Also make sure that if others are working on the repo as you that they are expec
 
 ## Run
 
+### What it does
+
 The script will do a rebase of _all_ commits. Even if the email address is not matched, the rebase will still be done.
+
+You are overwriting git history by editing commits and not adding new ones on top of the old and so will have to a do **force push** at the end.
+
+This affects the email of both commit _author_ and _committer_ fields.
+
+### Steps
 
 1. Navigate to your repo.
     - Make to sure to be in the **root**, since when you rebase you are rewinding the history to when there were **zero** directories and then you'll get an error.
