@@ -15,8 +15,12 @@ $ git checkout -b main-backup
 $ git checkout main
 ```
 
+Also make sure that if others are working on the repo as you that they are expecting this change.
+
 
 ## Run
+
+The script will do a rebase of _all_ commits. Even if the email address is not matched, the rebase will still be done.
 
 1. Navigate to your repo.
     - Make to sure to be in the **root**, since when you rebase you are rewinding the history to when there were **zero** directories and then you'll get an error.
@@ -30,10 +34,18 @@ $ git checkout main
         ```sh
         $ rewrite_author.sh OLD_EMAIL NEW_MAIL
         ```
+4. Use `git log` to verify your changes.
+5. Do a force push to GitHub.
+    ```sh
+    $ git push --force
+    ```
+6. Pull in changes on other machines. Give these instructions to other collaborators on your repo to avoid getting errors when they push or pull.
+    ```sh
+    $ git fetch
+    $ git reset --hard origin/main  # or origin/master
+    ```
 
-The script will do a rebase of _all_ commits. Even if the email address is not matched, the rebase will still be done.
-
-Sample output:
+Sample output of the script.
 
 ```
 Rewrite 80b85af8f4454c2c7b820ed13229897262f18bb2 (11/14) (1 seconds passed, remaining 0 predicted)
@@ -43,11 +55,13 @@ Ref 'refs/tags/v0.1.0' was rewritten
 ```
 
 
-## Revert
+## Undo changes
 
-Okay so you mess up your main branch.
+Okay so you messed up your main branch.
 
 Here is how to undo.
+
+**Warning** the tags got rewritten, and the steps here will **not** bring them back.
 
 Assuming the content on the remote like GitHub is good.
 
