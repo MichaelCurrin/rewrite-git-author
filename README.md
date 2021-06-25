@@ -9,7 +9,7 @@
 A simple tool replace change the email address for all commits in a repo by a user using a single command.
 
 
-## Sample
+## Sample usage
 
 ```sh
 $ rewrite_author.sh OLD_EMAIL NEW_MAIL
@@ -21,7 +21,9 @@ e.g.
 $ rewrite_author.sh old@example.com new@another-example.com
 ```
 
-Then check your Git log and your commits will go from:
+Then check your Git log and force push if you're happy.
+
+Your commits will have changed from the old email:
 
 ```
 Author: Foo Bar old@example.com
@@ -38,9 +40,9 @@ Date:   Thu Jun 24 20:08:18 2021 +0200
 
 ## Documentation
 
-See the [docs](/docs) directory 
+[![View - Documentation](https://img.shields.io/badge/View-Documentation-blue?style=for-the-badge)](/docs/)
 
-To set up and run and for more info on how this works
+To set up and run and for more info on how this works.
 
 And for how to update an email address for single commit with plain git.
 
