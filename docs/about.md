@@ -1,6 +1,7 @@
 # About
 
-## Batch update ##
+
+## Batch update
 
 The logic in this script comes from the second part of the tutorial link.
 
@@ -26,15 +27,18 @@ How to update one commit at a time, without a script.
 This logic comes from the first part of the tutorial linked above and is provided as
 instructions below.
 
-1. Rebase:
+1. Set your new author. For example:
     ```sh
-    $ git rebase -i -p COMMIT_HASH
+    $ export AUTHOR="John Doe <john@doe.org>"
     ```
-2. Then set to `edit` for each required commit.
-3. You then cycle through each marked commit.
-   Replace the author for each (use the angle brackets around the
-   email address.)
+2. Start a rebase, starting with the target oldest commit.
+    ```sh
+    $ git rebase -i -p COMMIT_REFERENCE
+    ```
+3. Then change set to `edit` for each required commit. Be careful - this will replace the author regardless of who it was.
+4. Save the content in the editor view then exit.
+5. Now you adjust each commit one at a time with these two commands.
    ```sh
-   $ git commit --amend --author="John Doe <john@doe.org>" --no-edit
+   $ git commit --amend --author="$AUTHOR" --no-edit
    $ git rebase --continue
    ```
