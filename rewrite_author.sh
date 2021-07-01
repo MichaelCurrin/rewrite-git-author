@@ -4,8 +4,12 @@
 # Licensed under MIT - see https://github.com/MichaelCurrin/rewrite-git-author/blob/main/LICENSE .
 
 if [[ "$#" -ne 2 ]]; then
+  echo "Rewrite Git Author"
+  echo
   echo "Usage: $0 OLD_EMAIL NEW_EMAIL"
-  echo "e.g $0 foo@bar.com fizz@buzz.net"
+  echo
+  echo "e.g. $0 foo@bar.com fizz@buzz.net"
+
   exit 0
 fi
 
