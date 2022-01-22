@@ -38,7 +38,7 @@ This affects the email of both commit _author_ and _committer_ fields.
         ```sh
         $ ~/scripts/rewrite_author.sh OLD_EMAIL NEW_MAIL
         ```
-    - Or run from your `~/bin` directory from anywhere.
+    - Or run from your executables directory from anywhere.
         ```sh
         $ rewrite_author.sh OLD_EMAIL NEW_MAIL
         ```
@@ -71,13 +71,14 @@ Here is how to undo.
 
 **Warning** the tags got rewritten, and the steps here will **not** bring them back.
 
-Assuming the content on the remote like GitHub is good.
+Assuming the content on the remote (like GitHub) is good, do this:
 
 ```sh
+$ git fetch 
 $ git reset --hard origin/main
 ```
 
-Or if you used a back-up branch.
+If you used a back-up branch, restore from that:
 
 ```sh
 $ git reset --hard main-backup
