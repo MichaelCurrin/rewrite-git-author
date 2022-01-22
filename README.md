@@ -6,24 +6,26 @@
 
 [![Made with Bash](https://img.shields.io/badge/Bash->=3-blue?logo=gnu-bash&logoColor=white)](https://www.gnu.org/software/bash/)
 
-A simple tool replace change the email address for all commits in a repo by a user using a single command.
+A simple tool to replace the email address for all commits in a repo by a user - using a single command. The timestamps and patches of the commits are left as is.
 
 
 ## Sample usage
+
+Run the shell script:
 
 ```sh
 $ rewrite_author.sh OLD_EMAIL NEW_MAIL
 ```
 
-e.g.
+Then check your Git log and force push if you're satisfied.
+
+e.g. If your ran this:
 
 ```sh
 $ rewrite_author.sh old@example.com new@another-example.com
 ```
 
-Then check your Git log.
-
-Your commits will have changed from the old email:
+Then your commits will be changed from the old email like:
 
 ```
 Author: Foo Bar old@example.com
@@ -37,12 +39,6 @@ Author: Foo Bar new@another-example.com
 Date:   Thu Jun 24 20:08:18 2021 +0200
 ```
 
-Then force push.
-
-```sh
-$ git push --force
-```
-
 
 ## Documentation
 
@@ -50,7 +46,7 @@ $ git push --force
 
 To set up and run and for more info on how this works.
 
-And for how to update an email address for single commit with plain git.
+And for how to update an email address for _single commit_ with plain Git.
 
 
 ## License
