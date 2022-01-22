@@ -1,5 +1,5 @@
 # Rewrite Git Author
-> The easy way to replace your email in all commits in a repo
+> The easy way to replace your email address in all your commits in a repo
 
 [![GitHub tag](https://img.shields.io/github/tag/MichaelCurrin/rewrite-git-author?include_prereleases=&sort=semver)](https://github.com/MichaelCurrin/rewrite-git-author/releases/)
 [![License](https://img.shields.io/badge/License-MIT-blue)](#license)
@@ -21,7 +21,7 @@ e.g.
 $ rewrite_author.sh old@example.com new@another-example.com
 ```
 
-Then check your Git log and force push if you're happy.
+Then check your Git log.
 
 Your commits will have changed from the old email:
 
@@ -35,6 +35,12 @@ To the new email:
 ```
 Author: Foo Bar new@another-example.com
 Date:   Thu Jun 24 20:08:18 2021 +0200
+```
+
+Then force push.
+
+```sh
+$ git push --force
 ```
 
 
