@@ -1,5 +1,5 @@
 # Rewrite Git Author
-> The easy way to replace your email address in all your commits in a repo
+> The easy way to replace an email address across all commits in a repo
 
 [![GitHub tag](https://img.shields.io/github/tag/MichaelCurrin/rewrite-git-author?include_prereleases=&sort=semver)](https://github.com/MichaelCurrin/rewrite-git-author/releases/)
 [![License](https://img.shields.io/badge/License-MIT-blue)](#license)
