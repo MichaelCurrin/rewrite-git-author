@@ -19,10 +19,15 @@ Add a symlink in a binary executables directory to the main script in the repo.
 e.g. 
 
 ```sh
-$ ln -s /usr/local/bin ~/repos/rewrite-git-author/rewrite_author.sh
+$ sudo ln -s ~/repos/rewrite-git-author/rewrite_author.sh /usr/local/bin 
 ```
 
-Whenever your update the Git repo, you'll also get the latest code used immediately. 
+To get updates, pull in from GitHub:
+
+```sh
+$ cd ~/repos/rewrite-git-author/
+$ git pull
+```
 
 
 ## Install with cURL
@@ -31,4 +36,18 @@ Whenever your update the Git repo, you'll also get the latest code used immediat
 $ cd /usr/local/bin
 $ curl -O https://raw.githubusercontent.com/MichaelCurrin/rewrite-git-author/main/rewrite_author.sh
 $ chmod +x rewrite_author.sh
+```
+
+To get updates, repeat the steps above.
+
+
+## Test it
+
+```console
+$ rewrite_author.sh 
+Rewrite Git Author
+
+Usage: rewrite_author.sh OLD_EMAIL NEW_EMAIL
+
+e.g. rewrite_author.sh foo@bar.com fizz@buzz.net
 ```
