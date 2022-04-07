@@ -39,7 +39,7 @@ instructions below.
     ```sh
     $ git rebase -i -p fd27b00ac^
     ```
-1. Then change set to `edit` for each required commit where you want to fix the author. **Warning** - this will replace the author regardless of who it was.
+1. Change `pick` to `edit` or `e` for each commit where you want to change the author. **Warning** - this will replace the author regardless of who it was.
 1. Save the content in the editor view then exit.
 1. Now you adjust each commit one at a time with these two commands:
    ```sh
