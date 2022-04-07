@@ -31,13 +31,17 @@ instructions below.
     ```sh
     $ export AUTHOR="John Doe <john@doe.org>"
     ```
-2. Start a rebase, starting with the target oldest commit.
+1. Start a rebase, starting with one commit _before_ the first commit you want to update.
     ```sh
     $ git rebase -i -p COMMIT_REFERENCE
     ```
-3. Then change set to `edit` for each required commit. Be careful - this will replace the author regardless of who it was.
-4. Save the content in the editor view then exit.
-5. Now you adjust each commit one at a time with these two commands.
+    e.g. use the carat and the target first commit to get one commit before it.
+    ```sh
+    $ git rebase -i -p fd27b00ac^
+    ```
+1. Then change set to `edit` for each required commit where you want to fix the author. **Warning** - this will replace the author regardless of who it was.
+1. Save the content in the editor view then exit.
+1. Now you adjust each commit one at a time with these two commands:
    ```sh
    $ git commit --amend --author="$AUTHOR" --no-edit
    $ git rebase --continue
