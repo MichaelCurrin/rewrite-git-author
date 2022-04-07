@@ -1,1 +1,4 @@
-# Rewrite Git Author docs
+---
+title: Rewrite Git Author docs
+permalink: /
+---
