@@ -3,12 +3,14 @@
 #
 # Licensed under MIT - see https://github.com/MichaelCurrin/rewrite-git-author/blob/main/LICENSE .
 
+SCRIPT_NAME=$(basename $0)
+
 if [[ "$#" -ne 2 ]]; then
   echo "Rewrite Git Author"
   echo
-  echo "Usage: $0 OLD_EMAIL NEW_EMAIL"
+  echo "Usage: $SCRIPT_NAME OLD_EMAIL NEW_EMAIL"
   echo
-  echo "e.g. $0 foo@bar.com fizz@buzz.net"
+  echo "e.g. $SCRIPT_NAME foo@bar.com fizz@buzz.net"
 
   exit 0
 fi
