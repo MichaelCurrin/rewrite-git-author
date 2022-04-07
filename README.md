@@ -44,11 +44,11 @@ Date:   Thu Jun 24 20:08:18 2021 +0200
 
 <div align="center">
 
-[![View - Documentation](https://img.shields.io/badge/View-Documentation-blue?style=for-the-badge)](/docs/)
+[![view - Documentation](https://img.shields.io/badge/view-Documentation-blue?style=for-the-badge)](https://michaelcurrin.github.io/rewrite-git-author/ "Go to project documentation")
 
 </div>
     
-See the docs site for how to set up and run this tool and for more info on how this works.
+See that for how to set up and run this tool and for more info on how this works.
 
 It also has instructions for how to update an email address for a _single commit_ with plain Git.
 
