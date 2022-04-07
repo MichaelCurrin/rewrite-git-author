@@ -27,7 +27,7 @@ How to update one commit at a time, using Git manually one command at a time.
 This logic comes from the first part of the tutorial linked above and is provided as
 instructions below.
 
-1. Set your new author. For example:
+1. Set your new author name and email in a variable. e.g.
     ```sh
     $ export AUTHOR="John Doe <john@doe.org>"
     ```
