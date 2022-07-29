@@ -8,7 +8,11 @@
 
 A simple tool to replace the email address for all commits in a repo by a user - using a single command. The timestamps and patches of the commits are left as is.
 
-**Warning** - this tool rewrites every commit in the history back to the first commit, even if nothing changed in the commit. So don't use this to just fix a few recent commits.
+## ⚠️ **Warning**
+
+Since a rebase is done here, this tool rewrites your Git history of commits. So you'll have to force-push your changes and get everyone to pull in the changes. 
+
+Further, _every_ commit in the history back to the _first_ commit will get rewritten, even if _nothing_ changed in the commits. So don't use this to just fix a few recent commits - rather fix those by hand, or submit an issue or PR improve this tool to only go back to a certain commit!
 
 
 ## Sample usage
