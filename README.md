@@ -53,17 +53,7 @@ Date:   Thu Jun 24 20:08:18 2021 +0200
 
 ## Alternative
 
-Instead of using this tool, install and run the [git-filter-repo][] tool, which is linked from the `git-filter-branch` official docs.
-
-[git-filter-repo](https://github.com/newren/git-filter-repo).
-
-Example from their docs.
-
-```sh
-$ git filter-repo --email-callback '
-  return email if email != b"root@localhost" else b"john@example.com"
-'
-```
+Instead of using this tool, see [git filter-name](https://michaelcurrin.github.io/dev-cheatsheets/cheatsheets/version-control/git/commands/filter-name.html).
 
 
 ## Documentation
