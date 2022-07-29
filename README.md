@@ -8,11 +8,16 @@
 
 A simple tool to replace the email address for all commits in a repo by a user - using a single command. The timestamps and patches of the commits are left as is.
 
+
 ## ⚠️ **Warning**
 
 Since a rebase is done here, this tool rewrites your Git history of commits. So you'll have to force-push your changes and get everyone to pull in the changes. 
 
 Further, _every_ commit in the history back to the _first_ commit will get rewritten, even if _nothing_ changed in the commits. So don't use this to just fix a few recent commits - rather fix those by hand, or submit an issue or PR improve this tool to only go back to a certain commit!
+
+See further warnings in the [git filter-branch][] docs.
+
+[git filter-branch]: https://git-scm.com/docs/git-filter-branch
 
 
 ## Sample usage
@@ -43,6 +48,21 @@ To the new email:
 ```
 Author: Foo Bar new@another-example.com
 Date:   Thu Jun 24 20:08:18 2021 +0200
+```
+
+
+## Alternative
+
+Instead of using this tool, install and run the [git-filter-repo][] tool, which is linked from the `git-filter-branch` official docs.
+
+[git-filter-repo](https://github.com/newren/git-filter-repo).
+
+Example from their docs.
+
+```sh
+$ git filter-repo --email-callback '
+  return email if email != b"root@localhost" else b"john@example.com"
+'
 ```
 
 
