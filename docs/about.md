@@ -22,27 +22,4 @@ is left unaffected. See the links above for how to set that too.
 
 ## Individual update
 
-How to update one commit at a time, using Git manually one command at a time.
-
-This logic comes from the first part of the tutorial linked above and is provided as
-instructions below.
-
-1. Set your new author name and email in a variable. e.g.
-    ```sh
-    $ export AUTHOR="John Doe <john@doe.org>"
-    ```
-1. Start a rebase, starting with one commit _before_ the first commit you want to update.
-    ```sh
-    $ git rebase -i -p COMMIT_REFERENCE
-    ```
-    e.g. use the carat and the target first commit to get one commit before it.
-    ```sh
-    $ git rebase -i -p fd27b00ac^
-    ```
-1. Change `pick` to `edit` or `e` for each commit where you want to change the author. **Warning** - this will replace the author regardless of who it was.
-1. Save the content in the editor view then exit.
-1. Now you adjust each commit one at a time with these two commands:
-   ```sh
-   $ git commit --amend --author="$AUTHOR" --no-edit
-   $ git rebase --continue
-   ```
+See [Authors](https://michaelcurrin.github.io/dev-cheatsheets/cheatsheets/version-control/git/authors.html) guide to change one commit at a time.
