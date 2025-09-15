@@ -6,7 +6,7 @@
 
 [![Made with Bash](https://img.shields.io/badge/Bash->=3-blue?logo=gnu-bash&logoColor=white)](https://www.gnu.org/software/bash/)
 
-A simple tool to replace the email address for all commits in a repo by a user - using a single command. The timestamps and patches of the commits are left as is.
+A simple tool to replace the **email address** for **all** commits in a repo by a user - using a single command. The timestamps and patches of the commits are left as is.
 
 
 ## ⚠️ **Warning**
