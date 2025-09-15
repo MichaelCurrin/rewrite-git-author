@@ -32,13 +32,15 @@ $ git pull
 
 ## Install with cURL
 
+Choose your preferred bin directory. You may need to use `sudo` for the move.
 ```sh
-$ cd /usr/local/bin
+$ cd ~/Downloads
 $ curl -O https://raw.githubusercontent.com/MichaelCurrin/rewrite-git-author/main/rewrite_author.sh
+$ mv rewrite_author.sh /usr/local/bin
 $ chmod +x rewrite_author.sh
 ```
 
-To get updates, repeat the steps above.
+To get updates from this repo, repeat the steps above.
 
 
 ## Test it
