@@ -3,6 +3,8 @@
 #
 # Licensed under MIT - see https://github.com/MichaelCurrin/rewrite-git-author/blob/main/LICENSE .
 
+export FILTER_BRANCH_SQUELCH_WARNING=1
+
 SCRIPT_NAME=$(basename $0)
 
 if [[ "$#" -ne 2 ]]; then
@@ -14,8 +16,6 @@ if [[ "$#" -ne 2 ]]; then
 
   exit 0
 fi
-
-export FILTER_BRANCH_SQUELCH_WARNING=1
 
 OLD_EMAIL="$1"
 NEW_EMAIL="$2"
